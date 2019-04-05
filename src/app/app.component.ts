@@ -8,9 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-first-app';
 
+  isShown: boolean = false;
   loadedFeature = 'recipe';
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;
+    this.isShown = false;
+  }
+
+  onToggle() {
+    this.isShown = !this.isShown;
   }
 }
