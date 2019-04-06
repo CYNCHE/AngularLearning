@@ -6,15 +6,5 @@
 <div class="container-fluid" style="max-width: 60%">
         <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
         <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>
-        <div class="dropdown show">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="onToggle()">
-                        Dropdown button
-                </button>
-                <div *ngIf="isShown" class="dropdown-menu show" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-        </div>
+        
 </div>

@@ -9,10 +9,15 @@ import { Recipe } from '../recipe-list/recipe.model';
 export class RecipeDetailComponent implements OnInit {
 
   @Input() recipe: Recipe;
+  isShown: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onToggle() {
+    this.isShown = !this.isShown;
   }
 
 }

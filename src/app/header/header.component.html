@@ -10,8 +10,8 @@
       </ul>
       <ul class="navbar-nav navbar-right">
         <li class="dropdown" >
-          <a href="#" class="dropdown-toggle" role="button" appDropdown>Manage</a>
-          <div class="dropdown-menu " appDropdown>
+          <a href="#" class="dropdown-toggle" role="button" (click)="onDropdown()">Manage</a>
+          <div class="dropdown-menu show" *ngIf="isShown">
             <a class="dropdown-item" href="#">Save Data</a>
             <a class="dropdown-item" href="#">Fetch Data</a>
           </div>

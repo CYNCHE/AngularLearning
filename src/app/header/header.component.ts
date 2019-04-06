@@ -9,6 +9,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() featureSelected: EventEmitter<string> = new EventEmitter();
+  isShown: boolean = false;
 
   constructor() { }
 
@@ -16,8 +17,11 @@ export class HeaderComponent implements OnInit {
   }
 
   onSelect(feature: string) {
-     this.featureSelected.emit(feature);
-     console.log(this.featureSelected);
+    this.featureSelected.emit(feature);
+  }
+
+  onDropdown() {
+    this.isShown = !this.isShown;
   }
 
 }
