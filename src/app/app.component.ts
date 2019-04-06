@@ -12,7 +12,7 @@ export class AppComponent {
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;
-    this.isShown = false;
+    //this.isShown = false;
   }
-
+  
 }
