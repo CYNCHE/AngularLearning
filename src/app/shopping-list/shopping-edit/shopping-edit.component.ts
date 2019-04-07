@@ -25,7 +25,7 @@ export class ShoppingEditComponent implements OnInit {
     const newIngredient = new Ingredient(igrName, igrAmount);
     console.log(newIngredient);
     this.slService.addIngredients(newIngredient);
-    //this.ingredientAdded.emit(newIngredient);
+  
   }
 
 
