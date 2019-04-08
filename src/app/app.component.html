@@ -4,7 +4,12 @@
 <router-outlet></router-outlet> -->
 <br>
 <div class="container-fluid" style="max-width: 60%">
-        <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
-        <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>
-        
+  <div class="row">
+    <div class="col-md-12">
+      <!-- <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list> -->
+      <!-- add router -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>    
 </div>
