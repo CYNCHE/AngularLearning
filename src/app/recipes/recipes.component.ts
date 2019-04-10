@@ -9,16 +9,17 @@ import { RecipeService } from './recipe.service';
 })
 export class RecipesComponent implements OnInit {
 
-  selectedRecipe: Recipe;
-  constructor(private recipeService: RecipeService) { }
+  // selectedRecipe: Recipe;
+  constructor() { }
 
   ngOnInit() {
-    this.recipeService.recipeSelected
-      .subscribe(
-        (recipe: Recipe) => {
-          this.selectedRecipe = recipe;
-        }
-      );
+    // not use EventEmitter here but Observable instaed
+    // this.recipeService.recipeSelected
+    //   .subscribe(
+    //     (recipe: Recipe) => {
+    //       this.selectedRecipe = recipe;
+    //     }
+    //   );
   }
 
 }

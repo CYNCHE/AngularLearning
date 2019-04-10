@@ -7,7 +7,7 @@ import { Ingredient } from '../shared/ingredient.model';
 })
 export class RecipeService {
 
-  recipeSelected: EventEmitter<Recipe> = new EventEmitter();
+  //recipeSelected: EventEmitter<Recipe> = new EventEmitter();
 
   private recipes: Recipe[] = [
     new Recipe('first dish',
