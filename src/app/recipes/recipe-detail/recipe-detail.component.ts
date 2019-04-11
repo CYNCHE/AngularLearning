@@ -33,7 +33,7 @@ export class RecipeDetailComponent implements OnInit {
           this.recipe = this.recipeService.getRecipe(this.id);
           // console.log(this.recipe);
         }
-      )
+      );
   }
 
   onToggle() {
