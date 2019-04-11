@@ -18,7 +18,8 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   editMode = false;
   editedItem: Ingredient;
-  editedItemIndex: number;
+  // initial value set to -1 to indicate that
+  editedItemIndex: number = -1;
 
   constructor(private slService: ShoppingListService) { }
 
@@ -48,6 +49,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
     else this.slService.addIngredients(newIngredient);
     this.editMode = false;
     form.reset();
+    this.editedItemIndex = -1;
   }
 
   onClear() {
@@ -56,11 +58,12 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   }
 
   onDelete() {
-    const value = this.slForm.value;
-    const ingredient = new Ingredient(value.name, value.amount);
-    this.slService.deleteIngredient(ingredient);
-    this.slForm.reset();
-    this.editMode = false;
+    // if no item is selected, click on delete will do nothing
+    if (this.editedItemIndex != -1) {
+      this.slService.deleteIngredient(this.editedItemIndex);
+      this.editedItemIndex = -1;
+      this.onClear();
+    }
   }
 
   ngOnDestroy() {
