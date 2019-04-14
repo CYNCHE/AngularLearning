@@ -10,6 +10,7 @@ import { Recipe } from '../recipe.model';
   templateUrl: './recipe-edit.component.html',
   styleUrls: ['./recipe-edit.component.css']
 })
+
 export class RecipeEditComponent implements OnInit {
   id: number;
   editMode = false;
@@ -89,11 +90,15 @@ export class RecipeEditComponent implements OnInit {
       this.recipeService.addRecipe(this.recipeForm.value);
     }
     // navigate to welcome page after save
-    this.router.navigate(['/recipes']);
+    this.onCancel();
+  }
+
+  onDeleteIngredient(index: number) {
+    (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
   }
 
   onCancel() {
-    this.router.navigate(['/recipes']);
+    this.router.navigate(['../', {relativeTo: this.route}]);
   }
 
 }
