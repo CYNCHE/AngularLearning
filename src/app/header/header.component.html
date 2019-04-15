@@ -9,7 +9,8 @@
         <li class="nav-item" routerLinkActive="active"><a routerLink="/shopping-list" class="nav-link">Shopping List</a> </li>
       </ul>
       <ul class="navbar-nav navbar-right">
-        <li class="dropdown" >
+        <li class="nav-item mr-4"><a routerLink="/signup" style="color: aliceblue">Register</a></li>
+        <li class="dropdown nav-item" >
           <a class="dropdown-toggle " role="button" (click)="onDropdown()" style="color: aliceblue">Manage</a>
           <div class="dropdown-menu show" *ngIf="isShown">
             <a class="dropdown-item" style="cursor: pointer" (click)="onSaveData()">Save Data</a>
