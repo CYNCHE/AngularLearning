@@ -12,13 +12,13 @@
         <li class="dropdown" >
           <a class="dropdown-toggle " role="button" (click)="onDropdown()" style="color: aliceblue">Manage</a>
           <div class="dropdown-menu show" *ngIf="isShown">
-            <a class="dropdown-item" style="cursor: pointer">Save Data</a>
-            <a class="dropdown-item" style="cursor: pointer">Fetch Data</a>
+            <a class="dropdown-item" style="cursor: pointer" (click)="onSaveData()">Save Data</a>
+            <a class="dropdown-item" style="cursor: pointer" (click)="onFetchData()">Fetch Data</a>
           </div>
         </li>
-  
+
       </ul>
     </div>
   </div>
-  
+
 </nav>
